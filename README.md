@@ -12,7 +12,7 @@ A simple example:
 ```clojure
 user> (use 'mississippi.core)
 user> (def subject {:a nil :b 1})
-user> (def validations {:a [(comp not nil? v) :msg "required"]
+user> (def validations {:a [(comp not nil?) :msg "required"]
                         :b [number? :msg "not numeric"]})
 user> (validate subject validations)
 {:a nil, :b 1, :errors {:a ("required")}}
